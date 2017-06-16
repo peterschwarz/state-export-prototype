@@ -3,14 +3,10 @@
 
 -- Setup DB
 -- via the psql in docker:
---- docker run -it --rm --link postgres:postgres postgres psql -h postgres -U postgres
+-- docker run -it --rm --link postgres:postgres postgres psql -h postgres -U postgres
 
 CREATE DATABASE intkey;
 
 CREATE USER intkey_app WITH PASSWORD 'intkey_proto';
 
 GRANT ALL PRIVILEGES ON DATABASE intkey TO intkey_app;
-
--- Queries
-
-SELECT name, value FROM setting WHERE end_block_num IS NULL
