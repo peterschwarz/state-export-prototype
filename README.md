@@ -1,7 +1,28 @@
-# state-export
+# State Delta Subscription Client Prototype
 
 A Clojure implementation of a State Delta Subscription Client for Hyperledger
 Sawtooth Distributed Ledger.
+
+## Prerequisites 
+
+The following tools are needed:
+
+* Java 1.7 or later
+* [Leiningen](https://leiningen.org)
+* Maven
+* PostgreSQL
+* Sawtooth Java SDK (see below)
+
+To make the Sawtooth Java SDK available, checkout
+[Hyperledger Sawtooth](https://github.com/hyperledger/sawtooth-core) and go to
+the `<sawtooth-core>/sdk/java` directory.  Run:
+
+```
+$ mvn install
+```
+
+This will build and install `[sawtooth/sdk "1.0-SNAPSHOT"]` into your local
+repository.
 
 ## Usage
 
