@@ -165,8 +165,8 @@
                            (subs (digest/sha-512 "intkey") 0 6) #'parse-intkey }
         delta-ch (async/chan 1
                              (comp
-                               (filter #'msg/is-state-delta-event?)
-                               (map #(msg/read-state-delta-event % namespace-parsers))))
+                               (filter #'msg/is-event-message-event?)
+                               (map #(msg/read-event-message % namespace-parsers))))
 
         _ (async/pipe message-ch delta-ch)
 
